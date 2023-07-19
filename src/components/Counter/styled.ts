@@ -7,24 +7,16 @@ export const CounterContainer = styled.div`
   align-items: center;
   justify-content: space-around;
   border-radius: 6px;
-  background-color: ${(props) => props.theme['gray-400']};
-
-  button {
-    width: 14px;
-    height: 14px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    background-color: transparent;
-  }
-
-  .number {
-    font-family: Roboto;
-    font-size: 16px;
-    font-weight: 400;
-    color: ${(props) => props.theme['gray-900']};
-  }
+  background: ${(props) => props.theme['gray-400']};
+`
+export const SumBuntton = styled.button`
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  background: transparent;
 
   .sumSymbols {
     color: ${(props) => props.theme['purple-medium']};
@@ -34,4 +26,11 @@ export const CounterContainer = styled.div`
     cursor: pointer;
     color: ${(props) => props.theme['purple-dark']};
   }
+`
+
+export const LabelContainer = styled.label`
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 400;
+  color: ${(props) => props.theme['gray-900']};
 `

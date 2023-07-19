@@ -67,7 +67,7 @@ const Input = styled.input`
   font-size: 14px;
   color: ${(props) => props.theme['gray-700']};
 `
-export const CepInput = styled(Input)`
+export const ZipCodeInput = styled(Input)`
   grid-column: 1 / 2;
   grid-row: 2 / 3;
 `
@@ -84,7 +84,7 @@ export const ComplementInput = styled(Input)`
   grid-column: 2 / 4;
   grid-row: 4/ 5;
 `
-export const InputNeighborhood = styled(Input)`
+export const NeighborhoodInput = styled(Input)`
   grid-column: 1 / 2;
   grid-row: 5 / 6;
 `

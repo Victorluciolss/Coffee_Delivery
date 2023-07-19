@@ -52,6 +52,10 @@ export const LabelContainer = styled.label`
   border-radius: 6px;
   border: ${(props) => props.theme['gray-200']};
   background-color: ${(props) => props.theme['yellow-medium']};
+
+  &:hover {
+    background-color: ${(props) => props.theme['yellow-dark']};
+  }
 `
 
 export const Navlink = styled(NavLink)`
