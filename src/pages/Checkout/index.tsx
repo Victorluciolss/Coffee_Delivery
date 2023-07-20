@@ -37,21 +37,48 @@ export function Checkout() {
               Informe o endereço onde deseja receber seu pedido
             </PlaceDeliveryInformation>
           </DeliveryInformation>
-          <ZipCodeInput id="zipCode" type="text" placeholder="CEP" />
-          <RoadInput id="road" type="text" placeholder="Rua" />
-          <NumberInput id="number" type="text" placeholder="Número" />
+          <ZipCodeInput
+            id="zipCode"
+            type="text"
+            placeholder="CEP"
+            {...register('zipCode')}
+          />
+          <RoadInput
+            id="road"
+            type="text"
+            placeholder="Rua"
+            {...register('road')}
+          />
+          <NumberInput
+            id="number"
+            type="text"
+            placeholder="Número"
+            {...register('Num')}
+          />
           <ComplementInput
             id="complement"
             type="text"
             placeholder="Complemento - opcional"
+            {...register('complement')}
           />
           <NeighborhoodInput
             id="neighborhood"
             type="text"
             placeholder="Bairro"
+            {...register('neighborhood')}
           />
-          <CityInput id="city" type="text" placeholder="Cidade" />
-          <StateInput id="state" type="text" placeholder="UF" />
+          <CityInput
+            id="city"
+            type="text"
+            placeholder="Cidade"
+            {...register('city')}
+          />
+          <StateInput
+            id="state"
+            type="text"
+            placeholder="UF"
+            {...register('state')}
+          />
         </FormContainer>
         <Payment />
       </Wrapper>

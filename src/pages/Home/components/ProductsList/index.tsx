@@ -1,17 +1,38 @@
-import { CatalogContainer, PriceContainer, ShoppingCartSimple } from './styles'
-import expresso from '../../../../assets/expresso.png'
+import {
+  CatalogContainer,
+  CoffeePrice,
+  InformCoffee,
+  PriceContainer,
+  ShoppingCartSimple,
+  SubTitleCoffee,
+  TitleCoffee,
+  VariantWrapper,
+} from './styles'
 import { Counter } from '../../../../components/Counter'
 
-export function ProductsList() {
+interface TypeOfCoffee {
+  id: string
+  imgage?: string
+  variants: string[]
+  subTitle: string
+  description: string
+  price: string
+}
+
+export function ProductsList(props: TypeOfCoffee) {
   return (
     <>
       <CatalogContainer>
-        <img src={expresso} alt="" />
-        <div className="badge">TRADICIONAL</div>
-        <h2>Espresso Tradicional</h2>
-        <p>O tradicional café feito com água quente e grãos moídos</p>
+        <img src={props.imgage} alt="" />
+        <VariantWrapper>
+          {props.variants.map((variant, index) => (
+            <TitleCoffee key={index}>{variant}</TitleCoffee>
+          ))}
+        </VariantWrapper>
+        <SubTitleCoffee>{props.subTitle}</SubTitleCoffee>
+        <InformCoffee>{props.description}</InformCoffee>
         <PriceContainer>
-          <span className="money">R$ 9,90</span>
+          <CoffeePrice>{props.price}</CoffeePrice>
           <Counter />
           <ShoppingCartSimple size={22} color="#FFF" weight="fill" />
         </PriceContainer>
