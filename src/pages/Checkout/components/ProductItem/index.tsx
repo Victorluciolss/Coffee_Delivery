@@ -1,18 +1,25 @@
 import { Trash } from 'phosphor-react'
 import { CoffeeContainer, ToBuy } from './styled'
-import expresso from '../../../../assets/expresso.png'
+
 import { Counter } from '../../../../components/Counter'
 
-export function SummaryList() {
+interface ProductItensProps {
+  id: string
+  image: string
+  subTitle: string
+  price: string
+}
+
+export function ProductItem(props: ProductItensProps) {
   return (
     <ToBuy>
       <div>
-        <img src={expresso} alt="" />
+        <img src={props.image} alt="" />
       </div>
       <CoffeeContainer>
         <div className="nameCoffee">
-          <span>Expresso Tradicional</span>
-          <span className="individualPrice">R$ 9,90</span>
+          <span>{props.subTitle}</span>
+          <span className="individualPrice">{props.price}</span>
         </div>
         <div className="amount">
           <Counter />
