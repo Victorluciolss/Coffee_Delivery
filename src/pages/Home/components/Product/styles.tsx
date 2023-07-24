@@ -62,7 +62,9 @@ export const CoffeePrice = styled.div`
   font-weight: 400;
   color: ${(props) => props.theme['gray-700']};
 `
-export const ShoppingCartSimple = styled(ShoppingCartSimpleIcon)`
+export const ShoppingCartSimple = styled(ShoppingCartSimpleIcon).attrs({
+  weight: 'fill',
+})`
   width: 38px;
   height: 38px;
   border-radius: 6px;

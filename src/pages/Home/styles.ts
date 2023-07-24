@@ -41,7 +41,7 @@ export const TextContainerInf = styled.div`
 `
 
 type IconWrapperProps = {
-  backgroundColor:
+  $backgroundColor:
     | 'yellow-dark'
     | 'gray-700'
     | 'yellow-medium'
@@ -54,7 +54,7 @@ export const IconWrapper = styled.div<IconWrapperProps>`
   justify-content: center;
   padding: 8px;
   border-radius: 50px;
-  background-color: ${(props) => props.theme[props.backgroundColor]};
+  background-color: ${(props) => props.theme[props.$backgroundColor]};
 `
 export const TitleListContainer = styled.div`
   width: 193px;

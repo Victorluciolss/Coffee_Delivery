@@ -169,25 +169,25 @@ export function Home() {
           </TitleContainer>
           <TextContainerInf>
             <div>
-              <IconWrapper backgroundColor="yellow-dark">
+              <IconWrapper $backgroundColor="yellow-dark">
                 <ShoppingCart size={16} color="#FFF" weight="fill" />
               </IconWrapper>
               Compra simples e segura
             </div>
             <div>
-              <IconWrapper backgroundColor="gray-700">
+              <IconWrapper $backgroundColor="gray-700">
                 <Package size={16} color="#FFF" weight="fill" />
               </IconWrapper>
               Embalagem mantém o café intacto
             </div>
             <div>
-              <IconWrapper backgroundColor="yellow-medium">
+              <IconWrapper $backgroundColor="yellow-medium">
                 <Timer size={16} color="#FFF" weight="fill" />
               </IconWrapper>
               Entrega rápida e rastreada
             </div>
             <div>
-              <IconWrapper backgroundColor="purple-medium">
+              <IconWrapper $backgroundColor="purple-medium">
                 <Coffee size={16} color="#FFF" weight="fill" />
               </IconWrapper>
               O café chega fresquinho até você

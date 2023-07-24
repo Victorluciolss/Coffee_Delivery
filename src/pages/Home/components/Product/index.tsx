@@ -11,7 +11,7 @@ import {
 import { Counter } from '../../../../components/Counter'
 import { ProductProps } from '../../../../interfaces/product.interface'
 
-interface TypeOfProduct extends ProductProps {
+export interface TypeOfProduct extends ProductProps {
   handleAddBag(product: ProductProps): void
 }
 
@@ -30,11 +30,10 @@ export function Product({ handleAddBag, ...product }: TypeOfProduct) {
         <InformCoffee>{description}</InformCoffee>
         <PriceContainer>
           <CoffeePrice>{price}</CoffeePrice>
-          <Counter />ç
+          <Counter />
           <ShoppingCartSimple
             size={22}
             color="#FFF"
-            weight="fill"
             onClick={() => handleAddBag(product)}
           />
         </PriceContainer>

@@ -17,7 +17,7 @@ export const TitleToPayContainer = styled.p`
 export const ItemsToPay = styled.div`
   width: 448px;
   padding: 30px;
-  background-color: ${(props) => props.theme['gray-200']};
+  background: ${(props) => props.theme['gray-200']};
   border-radius: 6px 44px;
 `
 
@@ -51,10 +51,10 @@ export const LabelContainer = styled.label`
   color: ${(props) => props.theme.white};
   border-radius: 6px;
   border: ${(props) => props.theme['gray-200']};
-  background-color: ${(props) => props.theme['yellow-medium']};
+  background: ${(props) => props.theme['yellow-medium']};
 
   &:hover {
-    background-color: ${(props) => props.theme['yellow-dark']};
+    background: ${(props) => props.theme['yellow-dark']};
   }
 `
 

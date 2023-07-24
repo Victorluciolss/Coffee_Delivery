@@ -52,6 +52,7 @@ export const CoffeeContainer = styled.div`
     border-radius: 6px;
     border: 1px solid ${(props) => props.theme['gray-200']};
     background: ${(props) => props.theme['gray-400']};
+    cursor: pointer;
   }
 
   .individualPrice {

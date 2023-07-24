@@ -20,7 +20,7 @@ function productsReducer(
       return products
 
     case 'delete':
-      return products.filter((product) => product.id !== action.item?.id)
+      return products.filter((product) => product.id !== action.id)
 
     default:
       throw Error('Unknown action: ' + action.type)

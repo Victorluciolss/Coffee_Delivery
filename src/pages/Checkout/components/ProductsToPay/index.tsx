@@ -6,30 +6,23 @@ import {
   TitleToPayContainer,
   ToPayContainer,
 } from './styled'
-import { v4 as uuidv4 } from 'uuid'
-import expresso from '../../../../assets/expresso.png'
 import { ProductItem } from '../ProductItem'
+import { useBag } from '../../../../context/BagContext'
 
 export function ProductsToPay() {
-  const productsItens = [
-    {
-      id: uuidv4(),
-      image: expresso,
-      subTitle: 'Expresso Tradicional',
-      price: 'R$ 9,90',
-    },
-  ]
+  const { products, deleteProductFromBag } = useBag()
   return (
     <ToPayContainer>
       <TitleToPayContainer>Cafés selecionados</TitleToPayContainer>
       <ItemsToPay>
-        {productsItens.map((productsItem, index) => (
+        {products.map((productsItem, index) => (
           <ProductItem
             key={index}
             id={productsItem.id}
             image={productsItem.image}
             subTitle={productsItem.subTitle}
             price={productsItem.price}
+            handleDeleteItem={deleteProductFromBag}
           />
         ))}
 

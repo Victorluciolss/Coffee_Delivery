@@ -3,11 +3,11 @@ import { CounterContainer, LabelContainer, SumBuntton } from './styled'
 import { useState } from 'react'
 
 export function Counter() {
-  const [counter, setCounter] = useState(0)
+  const [counter, setCounter] = useState(1)
 
   const handleDecreaseCounter = () => {
     const value = counter - 1
-    if (value >= 0) setCounter(value)
+    if (value >= 1) setCounter(value)
   }
 
   return (
